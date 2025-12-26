@@ -16,7 +16,11 @@
           <div class="col-sm-6 col-md-4 ">
             <div class="box ">
               <div class="img-box">
-                <img src="{{ category.icon.url}}" alt="">
+                {% if category.icon %}
+                    <img src="{{ category.icon.url }}" alt="{{ category.name }}">
+                {% else %}
+                    <img src="{% static 'default_category.png' %}" alt="Default category">
+                {% endif %}
               </div>
               <div class="detail-box">
                 <h5>

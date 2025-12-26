@@ -8,9 +8,11 @@ from .views import (
     card,
     product_detail,
     checkout_page,
-    login,
+    login_view,
     register,
+    logout_view,
     search,
+    product_list
 )
 
 urlpatterns = [
@@ -21,9 +23,11 @@ urlpatterns = [
     path("blog/", blog, name="blog"),
     path("contact/", contact, name="contact"),
     path("card/", card, name="card"),
-    path("product_detail/", product_detail, name="product_detail"),
+    path("products/", product_list, name="product_list"),
+    path("product/<int:product_id>/", product_detail, name="product_detail"),
     path("checkout_page/", checkout_page, name="checkout_page"),
-    path("login/", login, name="login"),
+    path("login/", login_view, name="login"),
     path("register/", register, name="register"),
+    path("logout_view/", logout_view, name="logout_view"),
     path("search/", search, name="search"),
 ]

@@ -10,9 +10,10 @@
                 <p><strong>30</strong> results for "<span>keyword</span>"</p>
             </div>
             <div class="row">
+                {% for product in products %}
                 <div class="col-md-3" id="book-list">
                     <div class="card mb-4">
-                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
+                        <img src="{{  }}" class="card-img-top" alt="Book Image">
                         <div class="card-body">
                             <h5 class="card-title">Book Title</h5>
                             <p class="card-text">Short description of the book goes here.</p>
@@ -22,54 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" id="book-list">
-                    <div class="card mb-4">
-                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Book Title</h5>
-                            <p class="card-text">Short description of the book goes here.</p>
-                            <p>Price: $19.99</p>
-                            <a href="#" class="btn btn-success">Add to card</a>
-                            <a href="#" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3" id="book-list">
-                    <div class="card mb-4">
-                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Book Title</h5>
-                            <p class="card-text">Short description of the book goes here.</p>
-                            <p>Price: $19.99</p>
-                            <a href="#" class="btn btn-success">Add to card</a>
-                            <a href="#" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3" id="book-list">
-                    <div class="card mb-4">
-                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Book Title</h5>
-                            <p class="card-text">Short description of the book goes here.</p>
-                            <p>Price: $19.99</p>
-                            <a href="#" class="btn btn-success">Add to card</a>
-                            <a href="#" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3" id="book-list">
-                    <div class="card mb-4">
-                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Book Title</h5>
-                            <p class="card-text">Short description of the book goes here.</p>
-                            <p>Price: $19.99</p>
-                            <a href="#" class="btn btn-success">Add to card</a>
-                            <a href="#" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
                 <!-- Add more book cards dynamically -->
             </div>
             <nav aria-label="Page navigation">

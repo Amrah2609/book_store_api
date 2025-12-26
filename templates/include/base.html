@@ -60,16 +60,19 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'blog' %}"> Blog </a>
               </li>
+                {% if request.user.is_authenticated %}
               <li class="nav-item position-relative">
                   <button class="mx-auto nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Pages
+                      {{ request.user.username }}
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{% url 'card' %}">Card</a>
-                    <a class="dropdown-item" href="{% url 'product_detail' %}">Product detail page</a>
+                    <a class="dropdown-item" href="{% url 'product_list' %}">Products</a>
                     <a class="dropdown-item" href="{% url 'checkout_page' %}">Checkout page</a>
+                    <a class="dropdown-item" href="{% url 'logout_view' %}">Logout</a>
                   </div>
               </li>
+                {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
               </li>
